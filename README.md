@@ -35,11 +35,11 @@ These two tasks are fundamental components of building conversational AI systems
 - **Data Preprocessing**:
     - Tokenize the sentences and prepare them for training by converting them into sequences of word indices using `Tokenizer`.
     - Encode the intent labels using `LabelEncoder` to convert text labels into numerical values.
-  
-- **Model Design and Training**:
-    - Build a deep learning model using **LSTM** or **GRU** layers for sequential data processing.
-    - Add dense layers and activation functions to create a classification model.
-    - Train the model using the preprocessed data and monitor performance during training using validation data.
+
+- **Experimentation**:
+
+  Throughout the Intent Classification task, we conducted extensive experimentation with multiple architectures and preprocessing techniques. Starting with CNN-based models for feature extraction and RNNs (LSTM and GRU) for sequential data modeling, we observed that hybrid architectures combining CNN for feature extraction and GRU for      
+ temporal dependencies yielded the best results. We further optimized hyperparameters such as batch size, learning rates, dropout rates, and epochs to balance the model's performance and training efficiency. Class balancing techniques like `class_weight` significantly improved performance on underrepresented classes, and rigorous evaluations on validation and test sets confirmed the robustness of the final model.
 
 - **Evaluation**: Evaluate the model using metrics like **F1-score** and **Confusion Matrix**. Results will show the model's ability to correctly classify intents and identify any biases in predicting certain classes.
 
@@ -74,11 +74,9 @@ These two tasks are fundamental components of building conversational AI systems
     - Tokenize the sentences and prepare them for NER tasks by converting text into a sequence of tokens.
     - Label the entities in the sentences using tags such as `B-LOCATION`, `B-DATE`, etc., for the beginning of an entity, and `I-LOCATION`, `I-DATE`, etc., for the continuation of the entity.
   
-- **Model Design and Training**:
-    - Build a sequential model using **LSTM**, **GRU**, or **Bidirectional LSTM** layers to handle sequence labeling.
-    - Use **TimeDistributed** layers for classification at the token level.
-    - Train the model using the labeled data and fine-tune the parameters.
-
+- **Experimentation**:
+  For the Named Entity Recognition (NER) task, we explored multiple deep learning architectures to effectively capture the sequential and contextual dependencies of text. We implemented models based on **Bidirectional GRU**, **LSTM**, and **TimeDistributed Dense layers** to classify tokens into BIO-labeled entities. Experimentation included hyperparameter optimization for embedding dimensions, learning rates, and dropout rates. Additionally, data preprocessing techniques like padding and one-hot encoding for token-level labels were optimized to ensure robust model training. The final Bidirectional GRU model achieved high precision and F1-score, validating its effectiveness in recognizing complex entity patterns within the dataset.
+  
 - **Evaluation**: Evaluate the NER model using metrics like **Precision** and **F1-score**. The goal is to measure the model's ability to correctly identify entities and minimize false positives/negatives.
 
 ### Final Model
