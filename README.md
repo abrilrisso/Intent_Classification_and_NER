@@ -56,12 +56,14 @@ These two tasks are fundamental components of building conversational AI systems
    **Validation Results**:
     - **Accuracy**: 0.97
     - **F1-score**: 0.82
+
     ![image](https://github.com/user-attachments/assets/8154fe7d-2a6b-426e-9555-7d37495b153f)
+
     **Test Results**:
     - **Accuracy**: 0.93
     - **F1-score**: 0.67
-  ![image](https://github.com/user-attachments/assets/2dd043b2-5209-46fe-afdd-19582d206f58)
 
+  <img src="https://github.com/user-attachments/assets/2dd043b2-5209-46fe-afdd-19582d206f58" alt="Confusion Matrix" width="100"/>
 
 ### Part 2: Named Entity Recognition (NER)
 
@@ -91,7 +93,9 @@ These two tasks are fundamental components of building conversational AI systems
    **Validation Results**:
     - **Precision**: 0.99
     - **F1-score**: 0.84
+      
   ![image](https://github.com/user-attachments/assets/60364964-f24a-4200-a57f-527d9f702d89)
+
     **Test Results**:
     - **Precision**: 0.99
     - **F1-score**: 0.76
