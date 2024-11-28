@@ -43,14 +43,24 @@ These two tasks are fundamental components of building conversational AI systems
 
 - **Evaluation**: Evaluate the model using metrics like **F1-score** and **Confusion Matrix**. Results will show the model's ability to correctly classify intents and identify any biases in predicting certain classes.
 
+### Final Model
+- **Model Architecture**:
+    - An **Embedding layer** to represent words.
+    - A **Conv1D layer** to extract sequential features.
+    - Dense layers with `relu` and `softmax` activation for final classification.
+
+- **Training**:
+    - Train the model using class balancing techniques.
+    - Use metrics like **F1-score** and **Confusion Matrix** to monitor performance.
+
    **Validation Results**:
-    - **Accuracy**: 97%
+    - **Accuracy**: 0.97
     - **F1-score**: 0.82
 
     ![image](https://github.com/user-attachments/assets/8154fe7d-2a6b-426e-9555-7d37495b153f)
       
     **Test Results**:
-    - **Accuracy**: 93%
+    - **Accuracy**: 0.93
     - **F1-score**: 0.67
 
   ![image](https://github.com/user-attachments/assets/2dd043b2-5209-46fe-afdd-19582d206f58)
@@ -71,7 +81,17 @@ These two tasks are fundamental components of building conversational AI systems
 
 - **Evaluation**: Evaluate the NER model using metrics like **Precision** and **F1-score**. The goal is to measure the model's ability to correctly identify entities and minimize false positives/negatives.
 
-    **Validation Results**:
+### Final Model
+- **Model Architecture**:
+    - An **Embedding layer** for word representations.
+    - A **Bidirectional GRU layer** to capture sequence dependencies in both directions.
+    - **TimeDistributed Dense layers** for token-level classification with `softmax`.
+
+- **Training**:
+    - Use cross-entropy loss for multi-class classification.
+    - Evaluate with **Precision** and **F1-score**.
+
+   **Validation Results**:
     - **Precision**: 0.99
     - **F1-score**: 0.84
 
@@ -80,13 +100,6 @@ These two tasks are fundamental components of building conversational AI systems
     **Test Results**:
     - **Precision**: 0.99
     - **F1-score**: 0.76
-
-## Final Deliverable
-
-The final deliverable includes:
-- Trained models for both intent classification and named entity recognition.
-- A comprehensive evaluation of both models using various metrics.
-- Code for data preprocessing, model training, and evaluation, along with visualizations of the results (e.g., confusion matrix for intent classification and entity recognition results).
 
 ## Contributors
 
