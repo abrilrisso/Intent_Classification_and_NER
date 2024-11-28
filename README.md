@@ -43,10 +43,18 @@ These two tasks are fundamental components of building conversational AI systems
 
 - **Evaluation**: Evaluate the model using metrics like **F1-score** and **Confusion Matrix**. Results will show the model's ability to correctly classify intents and identify any biases in predicting certain classes.
 
-    **Example Results**:
-    - **Accuracy**: 92%
-    - **F1-score**: 0.91 (depending on the dataset and model configuration)
-    - Confusion matrix analysis reveals which intents were often misclassified, allowing for targeted improvements.
+   **Validation Results**:
+    - **Accuracy**: 97%
+    - **F1-score**: 0.82
+
+    ![image](https://github.com/user-attachments/assets/8154fe7d-2a6b-426e-9555-7d37495b153f)
+      
+    **Test Results**:
+    - **Accuracy**: 93%
+    - **F1-score**: 0.67
+
+  ![image](https://github.com/user-attachments/assets/2dd043b2-5209-46fe-afdd-19582d206f58)
+
 
 ### Part 2: Named Entity Recognition (NER)
 
@@ -61,13 +69,17 @@ These two tasks are fundamental components of building conversational AI systems
     - Use **TimeDistributed** layers for classification at the token level.
     - Train the model using the labeled data and fine-tune the parameters.
 
-- **Evaluation**: Evaluate the NER model using metrics like **Precision**, **Recall**, and **F1-score**. The goal is to measure the model's ability to correctly identify entities and minimize false positives/negatives.
+- **Evaluation**: Evaluate the NER model using metrics like **Precision** and **F1-score**. The goal is to measure the model's ability to correctly identify entities and minimize false positives/negatives.
 
-    **Example Results**:
-    - **Precision**: 0.94
-    - **Recall**: 0.89
-    - **F1-score**: 0.91 (across all entity categories)
-    - The results demonstrate how well the model can extract entities such as locations and dates from user queries.
+    **Validation Results**:
+    - **Precision**: 0.99
+    - **F1-score**: 0.84
+
+  ![image](https://github.com/user-attachments/assets/60364964-f24a-4200-a57f-527d9f702d89)
+
+    **Test Results**:
+    - **Precision**: 0.99
+    - **F1-score**: 0.76
 
 ## Final Deliverable
 
